@@ -42,14 +42,24 @@ if (isset($_POST['reg_but']))
     $result_reg = mysqli_query($conn, $sql_reg_check);
     $isuser = mysqli_fetch_assoc($result_reg);
 
-    if(empty($newname))
+    if(!empty($newname) and  !empty($newpass))
     {
-        echo "nie podanu loginu";
+        
+        if ($isuser)
+        {
+            if($isuser['name'] === $newname)
+            {
+                echo "Nick zajęty";
+            }
+            else
+            {
+                echo "wyslano";
+            }
+        }
     }
-    if($isuser['name'] === $newname);
-{
-    echo "Nick zajęty";
-}
+    
+    
+    
 }
 
 
