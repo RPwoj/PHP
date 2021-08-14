@@ -1,6 +1,7 @@
 <?php
 session_start();
-echo $_SESSION['user'];
-echo "witaj";
 
-echo '<a href="logout.php"> wyloguj</a>';
+
+echo " witaj ";
+echo $_SESSION['user'];
+echo '<br><a href="logout.php"> wyloguj</a>';

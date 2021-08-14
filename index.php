@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
     include_once("server.php");
     ?>
     <form action="" method="post">
-        <input type="text" name="name" id="">
-        <input type="submit" value="sprawdz">
+        <input type="text" name="name" id="" placeholder="login"><br>
+        <input type="password" name="passw" id="" placeholder ="hasło"><br>
+        <button type="submit" name="send">zaloguj</button>
     </form>
 </body>
 </html>

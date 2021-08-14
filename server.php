@@ -8,30 +8,27 @@ $arr = [];
 $conn = mysqli_connect($host, $dbus, $pas, $nam);
 
 
-if(isset($_POST['name']))
+if(isset($_POST['send']))
 {
-    
     $username = $_POST['name'];
+    $pass = $_POST['passw'];
+    $sql = "SELECT * FROM users WHERE name = '$username'AND pass = '$pass'";
+    $result = mysqli_query($conn, $sql);
+    $user = mysqli_fetch_assoc($result);
+    if ($user) 
+    { // if user exists
+        if ($user['name'] === $username and $user['pass'] === $pass) 
+        {
+            session_start();
+            $_SESSION['user'] = $username;
     
-    
-    
-    
-$sql = "SELECT * FROM users WHERE name = '$username'";
-$result = mysqli_query($conn, $sql);
-$user = mysqli_fetch_assoc($result);
-if ($user) { // if user exists
-    if ($user['name'] === $username) 
-    {
-        session_start();
-        $_SESSION['user'] = $username;
-    
-      header ("Location: bubi.php");
+            header ("Location: bubi.php");
+        }
     }
-}
-else
-{
-    echo "ok";
-}
+    else
+        {
+            echo "błędny login lub hasło";
+        }
     
 
 
