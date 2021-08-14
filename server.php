@@ -13,6 +13,7 @@ if(isset($_POST['send']))
     $username = $_POST['name'];
     $pass = $_POST['passw'];
     $sql = "SELECT * FROM users WHERE name = '$username'AND pass = '$pass'";
+
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_assoc($result);
     if ($user) 
@@ -33,4 +34,25 @@ if(isset($_POST['send']))
 
 
 }
+if (isset($_POST['reg_but']))
+{
+    $newname = $_POST['reg_name'];
+    $newpass = $_POST['reg_pass'];
+    $sql_reg_check = "SELECT * FROM users WHERE name = '$newname'";
+    $result_reg = mysqli_query($conn, $sql_reg_check);
+    $isuser = mysqli_fetch_assoc($result_reg);
+
+    if(empty($newname))
+    {
+        echo "nie podanu loginu";
+    }
+    if($isuser['name'] === $newname);
+{
+    echo "Nick zajęty";
+}
+}
+
+
+
 ?>
+

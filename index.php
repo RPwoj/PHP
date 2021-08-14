@@ -16,5 +16,14 @@
         <input type="password" name="passw" id="" placeholder ="hasło"><br>
         <button type="submit" name="send">zaloguj</button>
     </form>
+
+    <form action="index.php" method="post">
+<h1> Nie masz konta? Zarajestruj się!</h1>
+<input type="text" name="reg_name" id="" placeholder="podaj login"><br>
+<input type="password" name="reg_pass" id="" placeholder="podaj hasło"><br>
+<button type="submit" name="reg_but">Zarejestruj</button>
+
+
+    </form>
 </body>
 </html>
