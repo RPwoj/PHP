@@ -42,22 +42,26 @@ if (isset($_POST['reg_but']))
     $result_reg = mysqli_query($conn, $sql_reg_check);
     $isuser = mysqli_fetch_assoc($result_reg);
 
-    if(!empty($newname) and  !empty($newpass))
+    if(!empty($_POST['reg_name']) and  !empty($_POST['reg_pass']))
     {
-        
         if ($isuser)
         {
-            if($isuser['name'] === $newname)
+        if($isuser['name'] === $newname)
             {
                 echo "Nick zajęty";
             }
-            else
-            {
-                echo "wyslano";
-            }
+          
+        }
+        else 
+        {
+            echo "nick wolny";
         }
     }
-    
+    else 
+    {
+        echo " należy wypełnić wszytskie pola";
+    }
+
     
     
 }
