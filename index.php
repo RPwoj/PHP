@@ -17,9 +17,12 @@ if(isset($_SESSION['user']))
 <body>
 
     <main>
-        <?php
+  
+    <div class="login">
+    <?php
     include_once("server.php");
     ?>
+</div>
     <div class="login">
         <form action="" method="post">
         <h3> ZALOGUJ SIĘ </h3>
@@ -28,6 +31,7 @@ if(isset($_SESSION['user']))
         <button type="submit" name="send">zaloguj</button>
     </form>
 </div>
+
 <div class="signup">
     
     <form action="index.php" method="post">

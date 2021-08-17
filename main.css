@@ -12,7 +12,6 @@
     color: white;
     justify-content:center;
     display: flex;
-    
     margin-top:50px;
 }
 body {
@@ -20,13 +19,14 @@ body {
     justify-content: center;
     display: flex;
     font-family: sans-serif;
-
+    background: linear-gradient(to bottom, #4e4e27, black);
 }
 main {
     background: linear-gradient(to bottom, #4e4e27, black);
     height: 500px;
     width: 500px;
     padding: 100px;
+
    
 }
 input {
@@ -34,10 +34,9 @@ input {
     border: 1px solid rgb(255, 255, 255);
     margin-top: 5px;
     height: 20px;
-border-radius: 5px;
-
-display: flex;
-background: rgb(31, 51, 27);
+    border-radius: 5px;
+    display: flex;
+    background: rgb(31, 51, 27);
 
 }
 button {
@@ -49,8 +48,11 @@ button {
     color: white;
 }
 .blad {
-    height: 50px;
-    width: 150px;
-    border:3px solid red;
+   
+    border:1px dotted red;
     color: red;
+   text-align: center;
+   padding: 10px;
+   font-weight: 700;
+    
 }
