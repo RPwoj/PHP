@@ -12,7 +12,7 @@
     color: white;
     justify-content:center;
     display: flex;
-    z-index: 111;
+    
     margin-top:50px;
 }
 body {
@@ -20,6 +20,7 @@ body {
     justify-content: center;
     display: flex;
     font-family: sans-serif;
+
 }
 main {
     background: linear-gradient(to bottom, #4e4e27, black);
@@ -34,7 +35,7 @@ input {
     margin-top: 5px;
     height: 20px;
 border-radius: 5px;
-text-justify: center;
+
 display: flex;
 background: rgb(31, 51, 27);
 
@@ -46,4 +47,10 @@ button {
     background-color:rgb(49, 70, 56);
     border: 2px solid black;
     color: white;
+}
+.blad {
+    height: 50px;
+    width: 150px;
+    border:3px solid red;
+    color: red;
 }

@@ -28,7 +28,7 @@ if(isset($_POST['send']))
     }
     else
         {
-            echo "błędny login lub hasło";
+            echo "<p class='blad'>błędny login lub hasło</p>";
         }
     
 
@@ -48,7 +48,7 @@ if (isset($_POST['reg_but']))
         {
         if($isuser['name'] === $newname)
             {
-                echo "Nick zajęty";
+                echo "<p class='blad'>Nick zajęty</p>";
             }
           
         }
@@ -56,12 +56,12 @@ if (isset($_POST['reg_but']))
         {
             $sql_signup = "INSERT INTO users (name, pass) VALUES('$newname', '$newpass')";
             mysqli_query($conn, $sql_signup);
-            echo "wyslano";
+            echo "<p class='blad'>zarejestrowano użytkownika, proszę się zalogować</p>";
         }
     }
     else 
     {
-        echo " należy wypełnić wszytskie pola";
+        echo "<p class='blad'>należy wypełnić wszytskie pola</p>";
     }
 
     
