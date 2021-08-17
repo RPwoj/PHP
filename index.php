@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+    header('Location:bubi.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
