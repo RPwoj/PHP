@@ -13,9 +13,14 @@ if(isset($_SESSION['user']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type= "text/css" href="main.css">
+    
 </head>
 <body>
 
+<div class="content">
+    <?php
+include_once("header.php");
+?>
     <main>
   
     <div class="login">
@@ -44,5 +49,7 @@ if(isset($_SESSION['user']))
     </form>
     </div>
 </main>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -24,8 +24,9 @@ body {
 main {
     background: linear-gradient(to bottom, #4e4e27, black);
     height: 500px;
-    width: 500px;
+    width: 80%;
     padding: 100px;
+    margin: 0px;
 
    
 }
@@ -55,4 +56,37 @@ button {
    padding: 10px;
    font-weight: 700;
     
+}
+nav {
+    width: 100%;
+    transition: .5s;
+    
+}
+.par {
+    float: left;
+    cursor: pointer;
+    padding: 10px;
+    
+    
+    
+    
+}
+.par:hover {
+    border-bottom: 3px solid white;
+    transition: .5s;
+}
+/* .active {
+    border-bottom: 3px solid white;
+    transition: 0.5s;
+    
+   
+} */
+
+.content {
+    display: block;
+    width: 100%;
+}
+a {
+    text-decorations:none; 
+    color:inherit;
 }
