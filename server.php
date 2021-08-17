@@ -54,7 +54,9 @@ if (isset($_POST['reg_but']))
         }
         else 
         {
-            echo "nick wolny";
+            $sql_signup = "INSERT INTO users (name, pass) VALUES('$newname', '$newpass')";
+            mysqli_query($conn, $sql_signup);
+            echo "wyslano";
         }
     }
     else 
