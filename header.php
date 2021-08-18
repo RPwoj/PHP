@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="main.css">
 <nav>
     
         <a href="index.php"><p class="par" id="par1">Strona głowna</p></a>

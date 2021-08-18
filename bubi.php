@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once("header.php");
 
 echo " witaj ";
 echo $_SESSION['user'];
