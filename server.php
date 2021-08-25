@@ -23,7 +23,7 @@ if(isset($_POST['send']))
             session_start();
             $_SESSION['user'] = $username;
     
-            header ("Location: bubi.php");
+            header ("Location: profile.php");
         }
     }
     else
@@ -56,7 +56,7 @@ if (isset($_POST['reg_but']))
         {
             $sql_signup = "INSERT INTO users (name, pass) VALUES('$newname', '$newpass')";
             mysqli_query($conn, $sql_signup);
-            echo "<p class='blad'>zarejestrowano użytkownika, proszę się zalogować</p>";
+            echo "<p class='correct'>zarejestrowano użytkownika, proszę się zalogować</p>";
         }
     }
     else 

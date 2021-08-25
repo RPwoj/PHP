@@ -2,7 +2,6 @@
 session_start();
 
 
-session_destroy();
 
 ?>
 <!DOCTYPE html>
@@ -27,9 +26,10 @@ include_once("header.php");
         <div>
     <?php
     include_once("server.php");
-    echo "Wylogowano: ";
-    echo $_SESSION['user'];
-    echo '<br><a href="index.php"> powrot do stronu glownej </a>';
+    echo " witaj ";
+        echo $_SESSION['user'];
+        echo "<br>";
+        echo '<br>'. '            <a href="logout.php"> wyloguj</a>';
     ?>
 </div>
 </div>
